@@ -15,5 +15,11 @@
   },
   "devDependencies": {
     "tape": "*"
-  }
+  },
+  "keywords": [
+    "game",
+    "camera",
+    "2d",
+    "gl"
+  ]
 }
