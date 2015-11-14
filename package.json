@@ -9,7 +9,10 @@
   "scripts": {
     "test": "tape test/*.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "gl-mat3": "^1.0.0",
+    "gl-vec2": "^1.0.0"
+  },
   "devDependencies": {
     "tape": "*"
   }
