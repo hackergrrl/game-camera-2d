@@ -1,6 +1,6 @@
 # game-camera-2d
 
-> A simple 2D camera; well-suited for games.
+> A simple 2D camera suited for games.
 
 
 # Install
