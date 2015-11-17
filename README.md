@@ -54,8 +54,8 @@ optional parameters:
 - `right` - the coordinate of the right side of the screen.
 - `top` - the coordinate of the top of the screen.
 - `bottom` - the coordinate of the bottom of the screen.
-- `centerX` - the X coordinate to centre the camera on.
-- `centerY` - the Y coordinate to centre the camera on.
+- `x` - the X coordinate to centre the camera on.
+- `y` - the Y coordinate to centre the camera on.
 - `angle` - the rotation to apply around the screen centre.
 - `scale` - the scaling factor to apply.
 
@@ -73,6 +73,10 @@ The camera's current X/Y offset from the origin.
 ### camera.rotation
 
 The rotation of the camera viewport, in radians.
+
+### camera.scale
+
+The scaling factor of the camera.
 
 
 ## Methods
