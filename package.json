@@ -1,7 +1,7 @@
 {
   "name": "game-camera-2d",
   "description": "a simple 2d camera, suited for games",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "repository": {
     "url": "git://github.com/noffle/game-camera-2d.git"
   },
