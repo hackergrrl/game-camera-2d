@@ -8,8 +8,8 @@ var vec2 = require('gl-vec2')
 function Camera2D(angle, scale, tx, ty, left, right, top, bottom) {
   this.angle     = angle
   this.scale     = scale
-  this.tx        = tx
-  this.ty        = ty
+  this.centerX   = tx
+  this.centerY   = ty
   this.left      = left
   this.right     = right
   this.top       = top
@@ -38,7 +38,7 @@ proto.getMatrix = function(out) {
   mat3.scale(this.matrix, this.matrix, this.scratchVector)
 
   // Translate to destination
-  vec2.set(this.scratchVector, this.tx, this.ty)
+  vec2.set(this.scratchVector, this.centerX, this.centerY)
   mat3.translate(this.matrix, this.matrix, this.scratchVector)
 
   out = out || mat3.create()
@@ -56,8 +56,8 @@ proto.setScale = function (scale) {
 }
 
 proto.setTranslation = function(x, y) {
-  this.tx = -x
-  this.ty = -y
+  this.centerX = -x
+  this.centerY = -y
 }
 
 function createCamera2D(options) {
@@ -65,8 +65,8 @@ function createCamera2D(options) {
   return new Camera2D(
     options.angle   || 0.0,
     options.scale   || 1.0,
-    options.tx      || 0.0,
-    options.ty      || 0.0,
+    options.centerX || 0.0,
+    options.centerY || 0.0,
     options.left    || 0.0,
     options.right   || 1.0,
     options.top     || 0.0,
