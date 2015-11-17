@@ -20,6 +20,7 @@
     "game",
     "camera",
     "2d",
-    "gl"
+    "gl",
+    "webgl"
   ]
 }

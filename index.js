@@ -43,27 +43,8 @@ proto.getMatrix = function(out) {
 
   out = out || mat3.create()
   mat3.copy(out, this.matrix)
+
   return out
-
-  // var lr = 1 / (this.left - this.right)
-  // var bt = 1 / (this.bottom - this.top)
-
-  // var s = Math.exp(this.logScale)
-  // var cx = Math.cos(this.angle)
-  // var cy = Math.sin(this.angle)
-  // var h = this.width / this.height
-
-  // out = out || new Array(9)
-  // out[0] = (-2 * lr) * s * cx
-  // out[1] = h*s*cy
-  // out[2] = 0
-  // out[3] = -s*cy
-  // out[4] = (-2 * bt) * s * cx
-  // out[5] = 0
-  // out[6] = -this.tx * s
-  // out[7] = h*this.ty * s
-  // out[8] = 1
-  // return out
 }
 
 proto.setRotation = function (angle) {
@@ -75,8 +56,6 @@ proto.setScale = function (scale) {
 }
 
 proto.setTranslation = function(x, y) {
-  // this.tx = 2.0 * x / this.width
-  // this.ty = 2.0 * y / this.width
   this.tx = -x
   this.ty = -y
 }
